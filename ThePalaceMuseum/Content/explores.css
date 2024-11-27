@@ -1,0 +1,127 @@
+.search{
+    width: 100%;
+    height: 65px;
+    background-color: black;
+    
+}
+.left{
+    position: absolute;
+    width: 300px;
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    top: 20px;
+}
+.lefts{
+    color: rgb(165, 103, 33);
+    
+}
+.left img{
+    width: 26px;
+    height: 26px;
+    position: relative;
+    left: -20px;
+}
+.log{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+.log img{
+    height: 35px;
+    position: relative;
+    top: 20px;
+}
+
+.bottow{
+    width: 380px;
+    margin: 30px auto;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    position: relative;
+    left: 750px;
+    top: -30px;
+}
+
+input{
+    width: 260px;
+    border: 1px solid #e2e2e2;
+    height: 30px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position:5px center;
+    padding:0 0 0 40px;
+}
+
+#search{
+    width: 30px;
+    height: 30px;
+    float: right;
+    background: white;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    position: relative;
+    left: -90px;
+}
+
+.listbody{
+    width: 100%;
+    position: absolute;
+}
+.li{
+    float: left;
+    overflow: hidden;
+    width: 380px;
+    height: 210px;
+    border-left: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid #222;
+    background-color: rgb(61, 61, 61);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    
+}
+.span{
+    width: 378px;
+    height: 40px;
+    position: relative;
+    top: -40px;
+    background-color: rgba(92, 92, 92, 0.5);
+}
+.span div{
+    font-size: 14px;
+    color: white;
+    padding: 15px;
+    float: left;
+    margin-top: -5px;
+}
+.li img:hover{
+    animation: move .5s linear forwards;
+}
+@keyframes move{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.shu{
+    position: relative;
+    left: 260px;
+}
+.shuz{
+    position: relative;
+    left: 240px;
+}
+.nam{
+    position: relative;
+    left: -140px;
+}

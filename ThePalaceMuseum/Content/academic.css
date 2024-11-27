@@ -1,0 +1,266 @@
+.population{
+    width: 80%;
+    margin: auto;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.main .txt{
+    padding-top: 10px;
+    font-size: 26px;
+}
+
+.population p{
+    text-align: center;
+    color: gray;
+}
+.lan {
+    float: right;
+    background: url('../images/learning-pic2.jpg');
+    height: 406px;
+    width: 760px;
+}
+.writing{
+    line-height: 3em;
+    color: azure;
+}
+.writing a{
+    color: azure;
+    text-decoration: none;
+    font-size: 14px;
+}
+.writing a:hover{
+    color: burlywood;
+}
+.more{
+    position: absolute;
+    color: azure;
+    top: 130px;
+    right: 220px;
+    width: 1em;
+}
+.part{
+    width: 440px;
+    font-size: 26px;
+}
+.main1{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.frame {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 25px;
+    background-image: url('../images/learning-pic2.jpg');
+    height: 400px;
+    width: 440px;
+}
+.chilb{
+    position: relative;
+    height: 376px;
+}
+.chilb a{
+    color: azure;
+    text-decoration: none;
+    float: left;
+    width: 58px;
+    padding-left: 100px;
+    
+}
+.chilb a:hover{
+    color: burlywood;
+}
+.main2{
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.box{
+    margin-top: -500px;
+    margin-left: 750px;
+}
+.main2 span{
+    padding-top: 10px;
+    font-size: 26px
+}
+.txtnew{
+    position: relative;
+    top: -10px;
+}
+.maintxt{
+    position: relative;
+    width: 760px;
+    height: 500px;
+    left: -310px;
+    top: -12px;
+}
+.main3{
+    width: 100%;
+    height: 270px;
+    position: absolute;
+}
+.maintxtleft{
+    width: 50%;
+    background-color: silver;
+    
+}
+.main3 p{
+    margin: 20px;
+    text-indent: 2em;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+.main3 h2{
+    margin: 15px;
+}
+.maintxtright{
+    position: relative;
+    width: 50%;
+    left: 50%;
+    top: -252px;
+    background-color: rgb(158, 147, 147);
+}
+.maintxtbottom{
+    width: 100%;
+    height: 188px;
+    position: relative;
+    top: -268px;
+    background-color: rgb(85, 65, 51);
+   
+}
+.main4{
+    height: 60px;
+}
+.left{
+    width: 436px;
+    height: 600px;
+}
+.boxleft{
+    text-align: center;
+}
+.leftbottom img{
+    position: relative;
+    width: 436px;
+    height: 160px;
+    top: -540px;
+}
+.right{
+    width: 760px;
+    float: left;
+    margin-left: 440px;
+}
+.right div{
+    width: 50%;
+    height: 244px;
+}
+.rightnew div{
+    position: relative;
+    width: 33%;
+    height: 490px;
+    bottom: 490px;
+    left: 800px;
+}
+.right h2{
+    position: relative;
+    color: #000;
+    bottom: 250px;
+    left: 30px;
+}
+.right p{
+    position: relative;
+    color: rgb(255, 255, 255);
+    bottom: 250px;
+    text-indent: 2em;
+    margin: 20px;
+}
+.rightnew h2{
+    position: relative;
+    top: -500px;
+    left: 30px;
+}
+.ulli{
+    position: relative;
+    top: -500px;
+    list-style: none;
+    line-height: 50px;
+    
+}
+.ulli li{
+    font-size: 20px;
+}
+.ulli li a{
+    text-decoration: none;
+    color: white;
+}
+.ulli li a:hover{
+    color: rgb(177, 144, 83);
+}
+
+
+
+.workarea {
+    display: flex;
+}
+
+.position {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#personal {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    position: absolute;
+    bottom: 15px;
+    right: 2%
+}
+
+.spot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0
+}
+
+.svg-wrapper {
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+#shape {
+    stroke-width: 6px;
+    fill: transparent;
+    stroke: rgb(0, 0, 0);
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease
+}
+
+#text {
+    margin-top: -35px;
+    text-align: center
+}
+
+#text a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke: rgb(0, 0, 0)
+}

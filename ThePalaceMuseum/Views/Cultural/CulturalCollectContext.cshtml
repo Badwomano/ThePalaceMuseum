@@ -1,0 +1,145 @@
+﻿@{
+    Layout = null;
+}
+@using ThePalaceMuseumWeb.EF.Model
+@model List<Cultural>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/culturalIntroduce.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title>文物介绍</title>
+</head>
+
+<body>
+    <div class="MainBox">
+        <!-- 导航栏 -->
+        <div class="MessageMenu">
+            <div class="MenuTotalLogo">
+                <div class="LogoBox">
+                    <a href=""><img src="~/images/icon01_2.png" alt=""></a>
+                </div>
+            </div>
+            <div class="MenuTotal">
+                <a href="">
+                    故宫博物院藏品总目
+                </a>
+            </div>
+            <div class="MenuLogo">
+                <div class="menulogo">
+                    <img src="~/images/logo_center_v1.png" alt="">
+                </div>
+            </div>
+            <div class="MenuSearch">
+                <div class="search">
+                    <form>
+                        <div class="cp_search_box">
+                            <input type="text" value="" placeholder="共 1863404 件藏品" class="input01">
+                            <input type="button" onclick="_list.topSearch()" class="input02">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 导航栏end -->
+        <!-- 文物内容 -->
+        <div class="culContext">
+            <div class="block">
+                <div>
+                    <span class="fhui"><a href="~/Cultural/CulturalCollect">< 返回</a><span> | </span></span>
+                    <span>筛选：分类(1)</span><span> | </span>
+                    <span>年代(0)</span>
+                    <span><a href="">清空全部</a></span>
+                </div>
+                <span></span>
+            </div>
+
+            <div class="tableBox">
+                <h2>
+                    <div class="h2_info">文物号</div>
+                    <div class="h2_info">文物名称</div>
+                    <div class="h2_info">年代</div>
+                </h2>
+                @foreach (var item in Model)
+                {
+                    <div class="table">
+                        <div class="table_info">
+                            <a href="">@item.CulturalNumber</a>
+                        </div>
+                        <div class="table_info">
+                            <a href="">
+                                @item.CulturalName
+                                <font>
+                                    <img class="image_icon" src="~/images/icon_image.png" alt="">
+                                </font>
+                            </a>
+                        </div>
+                        <div class="table_info">@item.CulturalAntique</div>
+                    </div>
+                }
+            </div>
+            <!-- 文物内容end -->
+            <!-- 分页 -->
+            @{
+                int nextPage = ViewBag.pageIndex + 1;
+                if (nextPage > ViewBag.totalPage)
+                {
+                    nextPage = ViewBag.totalPage;
+                }
+                int prevPage = ViewBag.pageIndex - 1;
+                if (prevPage < 1)
+                {
+                    prevPage = 1;
+                }
+                string next = "/Cultural/CulturalCollectContext?pageIndex=" + nextPage;
+                string prev = "/Cultural/CulturalCollectContext?pageIndex=" + prevPage;
+            }
+            <div class="pages">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="@prev" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        @{
+                            for (int i = 1; i < ViewBag.totalPage; i++)
+                            {
+                                if (i == ViewBag.pageIndex)
+                                {
+                                    <li class="active"><a href="/Cultural/CulturalCollectContext?pageIndex=@i">@i</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="/Cultural/CulturalCollectContext?pageIndex=@i">@i</a></li>
+                                }
+                            }
+                        }
+                        <li>
+                            <a href="@next" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- 分页end -->
+        </div>
+    </div>
+
+    <div class="foot">
+        <img class="foot-logo" src="~/images/logo_s_v1.png">© 2001-现在 故宫博物院
+        <a href=" ">京ICP备05067311号-1</a>
+        <a style="margin-left: 30px; " href="/page/privacy ">隐私政策</a>
+        <a href="/page/copyright ">版权声明</a>
+        <a href="mailto:digicol@dpm.org.cn ">联系我们</a>
+    </div>
+</body>
+
+</html>

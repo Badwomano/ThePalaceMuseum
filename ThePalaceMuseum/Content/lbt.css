@@ -1,0 +1,79 @@
+.swiper {
+    height: 700px;
+}
+
+
+/* 图片自适应 */
+
+@keyframes imgmove {
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.swiper-slide {
+    overflow: hidden;
+}
+
+.swiper-slide li:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../images/ld_next.png) no-repeat center;
+    background-size: 100% 100%;
+    animation: imgmove 5s infinite;
+}
+
+
+/* 分页器自定义图标 */
+
+.my-bullet {
+    display: inline-block;
+    width: 27px;
+    height: 24px;
+    margin: 0 5px;
+    line-height: 3px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background: url(../images/dian2.png) no-repeat left center;
+}
+
+.my-bullet-active {
+    display: inline-block;
+    width: 27px;
+    height: 24px;
+    margin: 0 5px;
+    line-height: 3px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background: url(../images/dian2.png) no-repeat right center;
+}
+
+
+/* 清除前进后退按钮after */
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* 一般情况隐藏鼠标悬浮显示 */
+
+.swiper-button-prev,
+.swiper-button-next {
+    opacity: 0;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 1;
+}

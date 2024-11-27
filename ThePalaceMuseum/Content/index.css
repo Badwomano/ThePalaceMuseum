@@ -1,0 +1,1377 @@
+    @charset "utf-8";
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    body {
+        -webkit-font-smoothing: antialiased !important;
+        font-family: 微软雅黑, 'Heiti SC', 黑体, Arial;
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+    
+    .clear:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    .main_box {
+        width: 94%;
+        margin: auto;
+    }
+    /* 导航栏 */
+    
+    .menu {
+        background-color: rgb(81, 79, 76);
+        opacity: 0.9;
+        position: fixed;
+        height: 5rem;
+        width: 100%;
+        right: 0;
+        top: 0;
+        z-index: 999;
+    }
+    
+    .menu .logo {
+        width: 166px;
+        margin-left: 50px;
+        padding-top: 5px;
+        margin-right: 155px;
+    }
+    
+    .main_box img {
+        border: 0;
+        outline: 0;
+        vertical-align: middle;
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+    }
+    
+    .menu_title .menu1 img {
+        position: absolute;
+        width: 4%;
+    }
+    
+    .menu_title a {
+        line-height: 5rem;
+        text-decoration: none;
+        font-weight: 550;
+        font-size: 17px;
+        color: rgb(246, 247, 248);
+    }
+    
+    .menu_title a:hover {
+        color: antiquewhite;
+    }
+    
+    .menu_title {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+    }
+    
+    .listBox {
+        overflow: hidden;
+        background: url('../images/nav_bg.jpg') no-repeat;
+        display: none;
+    }
+    
+    .listBox .logo {
+        margin-right: 60px;
+        margin-top: 40px;
+        margin-left: 1400px;
+    }
+    /* 旋转图片 */
+    
+    .logo img {
+        -moz-transition: all 0.8s ease-in-out;
+        -webkit-transition: all 0.8s ease-in-out;
+        -o-transition: all 0.8s ease-in-out;
+        transition: all 0.8s ease-in-out;
+    }
+    
+    .logo img:hover {
+        -moz-transform: rotate(360deg) scale(1.5);
+        -webkit-transform: rotate(360deg) scale(1.5);
+        -o-transform: rotate(360deg) scale(1.5);
+        -ms-transform: rotate(360deg) scale(1.5);
+        transform: rotate(360deg) scale(1.5);
+    }
+    
+    .list {
+        display: flex;
+        margin: auto;
+        width: 80%;
+        padding-top: 80px;
+        padding-bottom: 90px;
+        justify-content: space-between;
+    }
+    
+    .list .item {
+        min-width: 160px;
+        text-align: center;
+    }
+    
+    .list .item img {
+        padding-left: 72px;
+        padding-bottom: 20px;
+    }
+    
+    .list .item h1 a {
+        color: white;
+        font-size: 28px;
+        font-weight: normal;
+    }
+    
+    .list .item dl a {
+        color: rgb(208, 161, 161);
+        justify-content: center;
+        line-height: 30px;
+    }
+    
+    .list .item dl a:hover {
+        color: white;
+    }
+    
+    .list .item dl dd {
+        text-align: center;
+        margin-inline-start: 0%
+    }
+    
+    .Explore {
+        background-color: rgba(118, 85, 39);
+        padding-left: 300px;
+        opacity: 0.6;
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        display: none;
+    }
+    
+    .exploreBox {
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .Explore a {
+        line-height: 5rem;
+        text-decoration: none;
+        font-size: 14px;
+        color: white;
+    }
+    
+    .Explore span {
+        margin-left: 40px;
+        height: 50px;
+    }
+    
+    .menu1 {
+        margin-right: 30px;
+    }
+    
+    .menu .cdl {
+        margin-top: 10px;
+        padding-top: 20px;
+        width: 30px;
+        height: 30px;
+        line-height: 5rem;
+        background: url(../images/ico_menu2.png) no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+        background-position: 0 0px;
+        cursor: pointer;
+    }
+    
+    .menuWriteBox {
+        width: 5%;
+    }
+    
+    .menu .menuWrite {
+        width: 30px;
+        height: 30px;
+        background: url(../images/留言板.png) no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .lyb {
+        border: 1px solid white;
+        border-radius: 4px;
+        width: 60px;
+        height: 35px;
+        text-align: center;
+        display: none;
+    }
+    
+    .lyb a {
+        line-height: 2em;
+    }
+    
+    .menu .menuWrite:hover {
+        background: url(../images/留言板hover.png) no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+    }
+    
+    .menu .menuUser {
+        width: 30px;
+        height: 30px;
+        background: url(../images/用户.png) no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .menu .menuZhon {
+        width: 30px;
+        height: 30px;
+        background-position: center 0px;
+        background-size: cover;
+        cursor: pointer;
+        margin-left: 15px;
+    }
+    
+    .menu .menuUser:hover {
+        background: url(../images/用户hover.png) no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+    }
+    
+    .menu .menuSearch {
+        width: 30px;
+        height: 30px;
+        background: url(../images/搜索.png) no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .menu .menuSearch:hover {
+        background: url(../images/搜索hover.png) no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+    }
+    
+    .cdlBox {
+        width: 50px;
+        height: 50px;
+        background: url(../images/ico_menu2.png) no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+        background-position: 0 -35px;
+    }
+    /* 子菜单 */
+    
+    .Explore {
+        background-color: rgba(118, 85, 39);
+        padding-left: 300px;
+        opacity: 0.6;
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        display: none;
+    }
+    
+    .exploreBox {
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .Explore a,
+    .GuideVisitors a,
+    .Exhibition a,
+    .Education a,
+    .Academic a,
+    .CulCreate a,
+    .About a {
+        line-height: 5rem;
+        text-decoration: none;
+        font-size: 14px;
+        color: white;
+    }
+    
+    .Explore span,
+    .GuideVisitors span,
+    .Exhibition span,
+    .Education span,
+    .Academic span,
+    .CulCreate span,
+    .About span {
+        margin-left: 40px;
+        height: 50px;
+    }
+    
+    .GuideVisitors {
+        background-color: rgba(118, 85, 39);
+        padding-left: 330px;
+        opacity: 0.6;
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        display: none;
+    }
+    
+    .GuideVisitorsBox {
+        width: 35%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .GuideVisitorsBox a:hover {
+        color: rgb(118, 85, 39);
+    }
+    
+    .Exhibition {
+        background-color: rgba(118, 85, 39);
+        padding-left: 450px;
+        opacity: 0.6;
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        display: none;
+    }
+    
+    .ExhibitionBox {
+        width: 35%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .Education {
+        background-color: rgba(118, 85, 39);
+        padding-left: 350px;
+        opacity: 0.6;
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        display: none;
+    }
+    
+    .EducationBox {
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .Academic {
+        background-color: rgba(118, 85, 39);
+        padding-left: 450px;
+        opacity: 0.6;
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        display: none;
+    }
+    
+    .AcademicBox {
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .CulCreate {
+        background-color: rgba(118, 85, 39);
+        padding-left: 600px;
+        opacity: 0.6;
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        display: none;
+    }
+    
+    .CulCreateBox {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .About {
+        background-color: rgba(118, 85, 39);
+        padding-left: 700px;
+        opacity: 0.6;
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        display: none;
+    }
+    
+    .AboutBox {
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /* 子菜单end */
+    /* 导航栏end */
+    
+    .swiper .swiper-slide img {
+        width: 100%;
+    }
+    
+    .middle_box {
+        width: 94%;
+        margin: auto;
+    }
+    /* 闭馆公告 */
+    
+    .middle_box .CloseAbout {
+        color: #666;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .workarea1 {
+        display: flex;
+    }
+    
+    .position1 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    #personal1 {
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        bottom: 15px;
+        right: 2%
+    }
+    
+    .spot1 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0
+    }
+    
+    .svg-wrapper1 {
+        margin-top: 0;
+        position: relative;
+        width: 150px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 3px;
+        margin-left: 5px;
+        margin-right: 5px
+    }
+    
+    .shape1 {
+        stroke-width: 6px;
+        fill: transparent;
+        stroke: rgb(218, 218, 218);
+        stroke-dasharray: 85 400;
+        stroke-dashoffset: -220;
+        transition: 1s all ease
+    }
+    
+    .text1 {
+        margin-top: -35px;
+        text-align: center
+    }
+    
+    .text1 a {
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .svg-wrapper1:hover .shape1 {
+        stroke-dasharray: 50 0;
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke: rgb(218, 218, 218)
+    }
+    
+    .middle_box .CloseAbout h3 {
+        font-size: 30px;
+    }
+    
+    .middle_box .CloseAbout p a {
+        color: #666;
+        font-size: 16px;
+    }
+    /* 故宫咨询 */
+    
+    .consult_box {
+        margin-top: 35px;
+        display: flex;
+    }
+    
+    .consult {
+        width: 35.5%;
+        background-image: url('../images/jpg2.jpg');
+    }
+    
+    .bn_logo {
+        width: 25px;
+    }
+    
+    .txt {
+        color: white;
+        font-size: 24px;
+        vertical-align: middle;
+        font-weight: bold;
+        padding-top: 35px;
+    }
+    
+    .txt .before {
+        padding-left: 40px;
+    }
+    
+    .more {
+        font-size: 13px;
+        height: 100%;
+    }
+    
+    .more a {
+        color: white;
+    }
+    
+    .more .more1 {
+        position: absolute;
+        bottom: 25px;
+        left: 32px;
+    }
+    
+    .more .more2 {
+        position: absolute;
+        bottom: 10px;
+        left: 32px;
+    }
+    
+    .content {
+        margin-top: 20px;
+    }
+    
+    .content img {
+        width: 4%;
+    }
+    
+    .content .sm {
+        padding-left: 17px;
+    }
+    
+    .content a {
+        color: white;
+        position: relative;
+        padding: 5px 0;
+        padding-left: 10px;
+        display: block;
+        font-size: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .content .scroll-list {
+        line-height: 22px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #fff;
+        padding-left: 20px px;
+        margin-right: 0;
+        padding-right: 10px;
+        max-width: 99%;
+        position: relative;
+        display: inline-block;
+        padding-top: 0;
+        box-sizing: border-box;
+    }
+    
+    .content .scroll-list .news {
+        padding-left: 17px;
+    }
+    
+    .content .scroll-list li a:hover {
+        color: rgb(228, 214, 135);
+    }
+    
+    .content .scroll-list p {
+        width: 60px;
+        float: right;
+        font-family: Arial;
+        font-size: 17px;
+    }
+    
+    .timeSou {
+        font-size: 18px;
+    }
+    
+    .content .scroll-list a {
+        line-height: 22px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #fff;
+        padding-left: 20px;
+        margin-right: 0;
+        padding-right: 25px;
+        max-width: 82%;
+        position: relative;
+        display: inline-block;
+        padding-top: 0;
+        box-sizing: border-box;
+    }
+    
+    .content .scroll-list em {
+        margin-left: 3px;
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        right: 0;
+        background-color: #b73736;
+        color: #fff;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 3px;
+    }
+    
+    .wenwu {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    
+    .wenwu span img {
+        width: 110%;
+        transition: all 0.5s;
+    }
+    
+    .wenwu span img:hover {
+        transform: scale(1.2);
+    }
+    
+    .consult_box .Close_curator {
+        margin-left: 25px;
+        width: 100%;
+    }
+    
+    .Close_curator .back_close {
+        background: url('../images/png5.png') no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .Close_curator .info1 {
+        color: rgb(149, 182, 218);
+        text-align: center;
+        padding-top: 30px;
+        font-size: 20px;
+    }
+    
+    .Close_curator .info2 {
+        color: white;
+        font-size: 42px;
+        text-align: center;
+    }
+    
+    .Close_curator .info3 {
+        color: rgb(149, 182, 218);
+        text-align: center;
+    }
+    
+    .Close_curator .info4 {
+        color: rgb(235, 212, 154);
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .Close_curator .info5 .time {
+        font-size: 38px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .Close_curator .info5 .timeInfo {
+        padding-bottom: 25px;
+    }
+    
+    .Close_curator .info5 .timeInfo1 {
+        color: rgb(124, 154, 187);
+        padding-left: 45px;
+    }
+    
+    .Close_curator .info5 .timeInfo2 {
+        color: rgb(124, 154, 187);
+        padding-left: 75px;
+    }
+    
+    .Close_curator .info5 .timeInfo3 {
+        color: rgb(124, 154, 187);
+        padding-left: 75px;
+    }
+    
+    .d2 {
+        background: url('../images/png6.png');
+        color: #fff;
+        margin: 0 auto;
+    }
+    
+    .d2 .item1 {
+        width: 60%;
+        display: flex;
+        margin-right: 20px;
+    }
+    
+    .d2 .item1 .itemInfoa {
+        width: 100%;
+        padding-left: 20px;
+        padding-top: 40px;
+    }
+    
+    .d2 .item1 .itemInfob {
+        padding-top: 40px;
+    }
+    
+    .d2 .item1 .itemInfoa .h {
+        padding-left: 7px;
+        padding-top: 23px;
+        color: white;
+    }
+    
+    .d2 .item1 .itemInfob .h {
+        padding-left: 47px;
+        padding-top: 15px;
+        color: white;
+    }
+    
+    .d2 .item1 .itemInfoa img {
+        width: 65%;
+    }
+    
+    .d2 .item1 .itemInfob img {
+        width: 48%;
+    }
+    
+    .dd1 {
+        display: flex;
+    }
+    
+    .d2 .item2 {
+        width: 40%;
+    }
+    
+    .dd1 {
+        border-bottom: 1px solid rgb(79, 115, 153);
+    }
+    
+    .d2 .item2 .h {
+        font-size: 20px;
+        line-height: 1;
+        margin-bottom: 5px;
+        padding-top: 30px;
+    }
+    
+    .d2 .item2 .p {
+        color: rgb(168, 201, 235);
+    }
+    
+    .d2 .item2 .t {
+        padding-top: 10px;
+    }
+    
+    .dd2 {
+        padding-left: 20px;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 24px;
+    }
+    
+    .dd2 a {
+        color: white;
+    }
+    
+    .dd2 img {
+        width: 30%;
+    }
+    
+    .vaseBox {
+        display: flex;
+        margin-top: 25px;
+    }
+    
+    .vase {
+        width: 67.7%;
+        background: url('../images/s627b4ef388b86.jpg') no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+        cursor: pointer;
+    }
+    
+    .vase .hp img {
+        z-index: 0;
+        width: 40%;
+    }
+    
+    .open {
+        margin-left: 25px;
+        background-image: url('../images/jpg4.jpg');
+    }
+    
+    .open .news p {
+        margin-right: 50px;
+    }
+    
+    .open .news p span {
+        font-size: 16px;
+    }
+    /* 故宫藏品 */
+    
+    .block2 {
+        display: flex;
+        margin-top: 20px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .block2 .object1 {
+        background: rgb(230, 182, 192);
+        box-sizing: border-box;
+        color: #fff;
+        width: 525px;
+        height: 445px;
+    }
+    
+    .block2 .object1 h1 {
+        padding-top: 50px;
+    }
+    
+    .block2 .object1 h1 a span {
+        font-size: 28px;
+    }
+    
+    .block2 .object1 .num {
+        margin-top: 50px;
+    }
+    
+    .object1 .guImg {
+        width: 10%;
+    }
+    
+    .object1 .shuRow {
+        margin-bottom: 40px;
+    }
+    
+    .object1 .numCp {
+        font-weight: bold;
+    }
+    
+    .block2 .object1 .sj {
+        margin-top: 30px;
+    }
+    
+    .block2 .object1 a {
+        color: #fff;
+    }
+    
+    .block2 .object2 {
+        box-sizing: border-box;
+        width: 530px;
+        height: 445px;
+        margin-left: 30px;
+        background: url('../images/s629590a1de712.jpg') no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+    }
+    
+    .block2 .object3 {
+        box-sizing: border-box;
+        width: 530px;
+        height: 445px;
+        background: url('../images/s629590a1df355.jpg') no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+    }
+    
+    .block2 .object4 {
+        box-sizing: border-box;
+        width: 530px;
+        height: 445px;
+        background: url('../images/s629590a1dfe4a.jpg') no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+    }
+    
+    .see ul li {
+        overflow: hidden;
+        width: 530px;
+        height: 445px;
+    }
+    /* 定义由下而上的隐藏盒子 */
+    
+    .card {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card::before {
+        content: "";
+        height: 445px;
+        transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    
+    .card1::before {
+        background: url('../images/s629590a1de712.jpg');
+    }
+    
+    .card2::before {
+        background: url('../images/s629590a1df355.jpg');
+        background-position: -25px 10px;
+    }
+    
+    .card3::before {
+        background: url('../images/s629590a1dfe4a.jpg');
+    }
+    
+    .card::after {
+        content: "";
+        display: block;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, )rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.8) 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(0);
+        transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    
+    .card .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        padding: 16px 8px;
+        transform: translateY(100%);
+        transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    
+    .card h2 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .card p {
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 30px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .card .content *:not(h2) {
+        opacity: 0;
+        transform: translateY(2px);
+        transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    
+    .card:hover {
+        align-items: center;
+        opacity: 1;
+        background-color: rgba(33, 25, 21, 0.8);
+    }
+    
+    .card:hover::before {
+        transform: translateY(-5%);
+    }
+    
+    .card:hover::after {
+        transform: translateY(-50%);
+    }
+    
+    .card:hover .content {
+        transform: translateY(0);
+    }
+    
+    .card:hover .content *:not(h2) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.1s;
+    }
+    /* 博物馆活动 */
+    
+    .block3 {
+        display: flex;
+        margin-top: 35px;
+    }
+    
+    .active {
+        width: 480px;
+        height: 360px;
+        background-image: url('../images/png5.png');
+    }
+    
+    .active .news p,
+    .study .news p {
+        margin-right: 50px;
+    }
+    
+    .active .news li a,
+    .study .news li a {
+        width: 66%;
+    }
+    
+    .active .news p span {
+        font-size: 16px;
+    }
+    
+    .active .content .scroll-list {
+        width: 99%;
+    }
+    
+    .study {
+        margin-left: 30px;
+        width: 480px;
+        height: 360px;
+        background-image: url('../images/home_block1_news_bg.jpg');
+    }
+    
+    .current {
+        width: 440px;
+        height: 360px;
+        background-color: aqua;
+    }
+    
+    .current .currentBox1 {
+        width: 100%;
+        height: 180px;
+        background: url('../images/s6295cae7a0b5a.jpg') no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+        display: flex;
+    }
+    
+    .tpMain {
+        width: 38%;
+    }
+    
+    .tpMain .tpMainImg {
+        width: 73%;
+        margin-left: 20px;
+    }
+    
+    .mask {
+        width: 65%;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 20px;
+    }
+    
+    .mask li a {
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        max-width: 100%;
+        padding-right: 0;
+        box-sizing: border-box;
+        width: 80%;
+    }
+    
+    .mask li {
+        line-height: 25px;
+        margin-left: 30px;
+    }
+    
+    .current .currentBox2 {
+        width: 100%;
+        height: 180px;
+        background: url('../images/s625f79d6e943e.jpg') no-repeat center 0px;
+        background-position: center 0px;
+        background-size: cover;
+        display: flex;
+    }
+    
+    .block4 {
+        width: 100%;
+        display: flex;
+        margin-top: 25px;
+    }
+    
+    .block4 .item1,
+    .block4 .item2,
+    .block4 .item3,
+    .block4 .item4,
+    .block4 .item5 {
+        width: 20%;
+        height: 230px;
+        text-align: center;
+        background-position: center 0px;
+        background-size: cover;
+    }
+    
+    .block4 .item1 a h2,
+    .block4 .item2 a h2,
+    .block4 .item3 a h2,
+    .block4 .item4 a h2,
+    .block4 .item5 a h2 {
+        color: white;
+        font-size: 20px;
+    }
+    
+    .block4 .item1 a img,
+    .block4 .item2 a img,
+    .block4 .item3 a img,
+    .block4 .item4 a img,
+    .block4 .item5 a img {
+        margin-top: 50px;
+        width: 40%;
+    }
+    
+    .block4 .item1 {
+        background: url('../images/s5ebe364fa24bd.jpg') no-repeat center 0px;
+    }
+    
+    .block4 .item2 {
+        background: url('../images/s5835a58eb4421.jpg') no-repeat center 0px;
+    }
+    
+    .block4 .item3 {
+        background: url('../images/s5835a57aca965.jpg') no-repeat center 0px;
+    }
+    
+    .block4 .item4 {
+        background: url('../images/s5835a58eb4421.jpg') no-repeat center 0px;
+    }
+    
+    .block4 .item5 {
+        background: url('../images/s5835a57aca965.jpg') no-repeat center 0px;
+    }
+    /* 定义尾部*/
+    
+    .end {
+        width: 100%;
+        margin-top: 30px;
+        padding-bottom: 50px;
+        display: flex;
+        background-color: rgb(39, 39, 39);
+        flex-direction: column;
+    }
+    
+    .endLine1 {
+        width: 100%;
+        margin-top: 40px;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .endLine1 .list1 {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(71, 71, 71);
+        border-radius: 50%;
+        margin-right: 30px;
+        left: 20px;
+    }
+    
+    .endLine1 .list1 :hover {
+        background-color: rgb(127, 41, 40);
+        border-radius: 50%;
+    }
+    
+    .endLine1 p {
+        text-align: center;
+        font-size: 16px;
+        color: rgb(180, 179, 184);
+        margin-top: 5px;
+    }
+    
+    .endLine1 .list1 img {
+        width: 100%;
+    }
+    
+    .ad {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ad div {
+        margin-left: 20px;
+    }
+    
+    .endLine2 {
+        width: 100%;
+        margin-top: 20px;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .endLine2 span {
+        color: rgb(180, 179, 184);
+        background-color: rgb(71, 71, 71);
+        margin-right: 8px;
+        padding: 5px;
+    }
+    
+    .endLine3 {
+        width: 100%;
+        margin-top: 25px;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .endLine3 a {
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .endLine3 span {
+        margin-right: 10px;
+    }
+    
+    .endLine4 {
+        width: 100%;
+        margin-top: 25px;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .endLine4 span,
+    .endLine4 span a,
+    .endLine5 span a {
+        color: rgb(180, 179, 184);
+        margin-right: 10px;
+    }
+    
+    .endLine5 {
+        width: 100%;
+        margin-top: 25px;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+    }
+    /* 定义尾部end*/
+    /* 封装btn */
+    
+    .workarea {
+        display: flex;
+    }
+    
+    .position {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    #personal {
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        bottom: 15px;
+        right: 2%
+    }
+    
+    .spot {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0
+    }
+    
+    .svg-wrapper {
+        margin-top: 0;
+        position: relative;
+        width: 150px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 3px;
+        margin-left: 5px;
+        margin-right: 5px
+    }
+    
+    #shape {
+        stroke-width: 6px;
+        fill: transparent;
+        stroke: rgb(255, 255, 255);
+        stroke-dasharray: 85 400;
+        stroke-dashoffset: -220;
+        transition: 1s all ease
+    }
+    
+    #text {
+        margin-top: -35px;
+        text-align: center
+    }
+    
+    #text a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .svg-wrapper:hover #shape {
+        stroke-dasharray: 50 0;
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke: rgb(255, 255, 255)
+    }
+    
+    .tab {
+        display: none;
+    }
+    
+    .tab.on {
+        display: block;
+    }

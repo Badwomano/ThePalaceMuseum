@@ -1,0 +1,148 @@
+/* 定义尾部*/
+
+@charset "utf-8";
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 微软雅黑, 'Heiti SC', 黑体, Arial;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.end {
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    background-color: rgb(39, 39, 39);
+    flex-direction: column;
+}
+
+.endLine1 {
+    width: 100%;
+    margin-top: 40px;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.endLine1 .list1 {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(71, 71, 71);
+    border-radius: 50%;
+    margin-right: 30px;
+    left: 20px;
+}
+
+.endLine1 .list1 :hover {
+    background-color: rgb(127, 41, 40);
+    border-radius: 50%;
+}
+
+.endLine1 p {
+    text-align: center;
+    font-size: 16px;
+    color: rgb(180, 179, 184);
+    margin-top: 5px;
+}
+
+.endLine1 .list1 img {
+    width: 100%;
+}
+
+.ad {
+    display: flex;
+    flex-direction: column;
+}
+
+.ad div {
+    margin-left: 20px;
+}
+
+.endLine2 {
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.endLine2 span {
+    color: rgb(180, 179, 184);
+    background-color: rgb(71, 71, 71);
+    margin-right: 8px;
+    padding: 5px;
+}
+
+.endLine3 {
+    width: 100%;
+    margin-top: 25px;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.endLine3 a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.endLine3 span {
+    margin-right: 10px;
+}
+
+.endLine4 {
+    width: 100%;
+    margin-top: 25px;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.endLine4 span,
+.endLine4 span a,
+.endLine5 span a {
+    color: rgb(180, 179, 184);
+    margin-right: 10px;
+}
+
+.endLine5 {
+    width: 100%;
+    margin-top: 25px;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* 定义尾部end*/

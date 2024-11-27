@@ -1,0 +1,870 @@
+﻿@{
+    Layout = null;
+}
+@using ThePalaceMuseumWeb.EF.Model
+@model List<Notice>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/index.css">
+    <link type="text/css" rel="stylesheet" href="~/Content/lbt.css" />
+    <link rel="stylesheet" href="~/Content/swiper-bundle.css">
+    <script src="~/Scripts/swiper-bundle.js"></script>
+    <title>故宫博物馆</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main_box">
+            <!-- 导航栏 -->
+            <div class="menu">
+                <div class="row">
+                    <div class="logo col-md-1">
+                        <a href=""><img src="~/images/s611e2933ab432.png"></a>
+                    </div>
+                    <div class="menu_title">
+                        <div><a href="~/Home/Index">首页</a></div>
+                        <div id="guideVisitors" class="tab_item"><a href="~/GuideVisitors/GuideVisitors">导览</a></div>
+                        <div id="exhibition" class="tab_item"><a href="">展览</a></div>
+                        <div id="education" class="tab_item"><a href="~/Academic/Educate">教育</a></div>
+                        <div id="explore" class="tab_item"><a href="~/Explore/Explore">探索</a></div>
+                        <div id="academic" class="tab_item"><a href="~/Academic/Academic">学术</a></div>
+                        <div id="culCreate" class="tab_item"><a href="~/Cultural/CulturalCollect">文创</a></div>
+                        <div id="about" class="tab_item"><a href="">关于</a></div>
+                        <div class="menuWriteBox">
+                            <div class="menuWrite">
+                                <div>
+                                    <a>
+                                        <div class="write"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lyb" style="margin-top:10px ;">
+                                <a href="~/MessageBoard/MessageBoard">留言板</a>
+                            </div>
+                        </div>
+                        <div class="menuWriteBox">
+                            <div class="menuUser">
+                                <div>
+                                    <a>
+                                        <div class="user"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lyb" style="margin-top:10px ;">
+                                <a href="~/User/Login">登录</a>
+                            </div>
+                            <div class="lyb">
+                                <a href="~/User/Login">注册</a>
+                            </div>
+                        </div>
+                        <div class="menuWriteBox">
+                            <div class="menuZhon">
+                                <div>
+                                    <a>
+                                        <div class="zhon">中</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lyb" style="margin-top: 20px;">
+                                <a href="">E N</a>
+                            </div>
+                            <div class="lyb">
+                                <a href="">青少版</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="menuSearch">
+                                <div>
+                                    <a>
+                                        <div class="search"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menuWriteBox">
+                            <div class="menu1">
+                                <div>
+                                    <a>
+                                        <div class="cdl" id="showList"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 子菜单 -->
+                <div class="GuideVisitors tab">
+                    <div class="GuideVisitorsBox">
+                        <div><a href="">开放时间</a></div>
+                        <div><a href="">在线订票</a></div>
+                        <div><a href="">交通路线</a></div>
+                        <div><a href="">浏览须知</a></div>
+                        <div><a href="">全景故宫</a></div>
+                    </div>
+                </div>
+                <div class="Exhibition tab" >
+                    <div class="ExhibitionBox">
+                        <div><a href="">近期展览</a></div>
+                        <div><a href="">专馆</a></div>
+                        <div><a href="">原状陈列</a></div>
+                        <div><a href="">赴外展览</a></div>
+                    </div>
+                </div>
+                <div class="Education tab">
+                    <div class="EducationBox">
+                        <div><a href="">教育新闻</a></div>
+                        <div><a href="">故宫讲坛</a></div>
+                        <div><a href="">书画考级</a></div>
+                        <div><a href="">故宫博物院教育中心</a></div>
+                        <div><a href="">国际博协培训中心</a></div>
+                        <div><a href="">故宫志愿者</a></div>
+                    </div>
+                </div>
+                <div class="Explore tab">
+                    <div class="exploreBox">
+                        <div><a href="">建筑</a></div>
+                        <div><a href="">藏品</a></div>
+                        <div><a href="">古籍</a></div>
+                        <div><a href="">宫廷历史</a></div>
+                        <div><a href="">文物医院</a></div>
+                        <div><a href="">文物专题</a></div>
+                        <div><a href="">名画记</a></div>
+                        <div><a href="">数字多宝阁</a></div>
+                        <div><a href="">数字文物库</a></div>
+                        <div><a href="/Cultural/CulturalCollect">藏品总目</a></div>
+                    </div>
+                </div>
+                <div class="Academic tab">
+                    <div class="AcademicBox">
+                        <div><a href="">学术资讯</a></div>
+                        <div><a href="">专家名录</a></div>
+                        <div><a href="">故宫研究院</a></div>
+                        <div><a href="">故宫学院</a></div>
+                        <div><a href="">其他学术机构</a></div>
+                        <div><a href="">故宫博物院院刊</a></div>
+                    </div>
+                </div>
+                <div class="CulCreate tab">
+                    <div class="CulCreateBox">
+                        <div><a href="">故宫出版</a></div>
+                        <div><a href="">文创产品</a></div>
+                        <div><a href="">故宫壁纸</a></div>
+                        <div><a href="">故宫APP</a></div>
+                        <div><a href="">故宫游戏</a></div>
+                    </div>
+                </div>
+                <div class="About tab">
+                    <div class="AboutBox">
+                        <div><a href="">总说</a></div>
+                        <div><a href="">领导</a></div>
+                        <div><a href="">资讯</a></div>
+                        <div><a href="">院史编年</a></div>
+                        <div><a href="">景仁榜</a></div>
+                        <div><a href="">机构设置</a></div>
+                    </div>
+                </div>
+                <!-- 子菜单end -->
+                <div class="listBox">
+                    <div class="logo">
+                        <a id="closeList"><img src="~/images/ico_close.png"></a>
+                    </div>
+                    <div class="list">
+                        <div class="item">
+                            <h1><a href="/Visit.html">导览</a></h1>
+                            <div><img src="~/images/nav_liststyle.png" alt=""></div>
+                            <dl>
+                                <dd><a href="/Visit.html#block3">开放时间</a></dd>
+                                <dd><a href="https://gugong.ktmtech.cn/" target="_blank">在线订票</a></dd>
+                                <dd><a href="/Visit.html#block5">交通路线</a></dd>
+                                <dd><a href="/Visit.html#block6">游览须知</a></dd>
+                                <dd><a href="http://pano.dpm.org.cn/gugong_app_pc/index.html" target="_blank">全景故宫</a></dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <h1><a href="/shows.html">展览</a></h1>
+                            <div><img src="~/images/nav_liststyle.png" alt=""></div>
+                            <dl>
+                                <dd><a href="/shows.html#temporary2">近期展览</a></dd>
+                                <dd><a href="/shows.html#temporary4">专馆</a></dd>
+                                <dd><a href="/shows.html#temporary_5">原状陈列</a></dd>
+                                <dd><a href="/shows.html#temporary_6">赴外展览</a></dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <h1><a href="/Events.html">教育</a></h1>
+                            <div><img src="~/images/nav_liststyle.png" alt=""></div>
+                            <dl>
+                                <dd><a href="/Events.html#hd1-2">教育新闻</a></dd>
+                                <dd><a href="/gugongforum.html">故宫讲坛</a></dd>
+                                <dd><a href="/calligraphy_paint/index.html">书画考级</a></dd>
+                                <dd><a href="/Events.html#hd1-3">故宫博物院教育中心</a></dd>
+                                <dd><a href="/Events.html#hd1-6">国际博协培训中心</a></dd>
+                                <dd><a href="/Events.html#hd1-7">故宫志愿者</a></dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <h1><a href="/Explore.html">探索</a></h1>
+                            <div><img src="~/images/nav_liststyle.png" alt=""></div>
+                            <dl>
+                                <dd><a href="/explore/buildings.html">建筑</a></dd>
+                                <dd><a href="/explore/collections.html">藏品</a></dd>
+                                <dd><a href="/explore/ancients.html">古籍</a></dd>
+                                <dd><a href="/explores/courts.html">宫廷历史</a></dd>
+                                <dd><a href="/explore/protects.html">文物医院</a></dd>
+                                <dd><a href="/explore/cultures.html">文化专题</a></dd>
+                                <dd><a href="http://minghuaji.dpm.org.cn" target="_blank">名画记</a></dd>
+                                <dd><a href="/shuziduobaoge/html.html" target="_blank">数字多宝阁</a></dd>
+                                <dd><a href="https://digicol.dpm.org.cn/" target="_blank">数字文物库</a></dd>
+                                <dd><a href="https://zm-digicol.dpm.org.cn/" target="_blank">藏品总目</a></dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <h1><a href="/Research.html">学术</a></h1>
+                            <div><img src="~/images/nav_liststyle.png" alt=""></div>
+                            <dl>
+                                <dd><a href="/learning/dynamic.html">学术资讯</a></dd>
+                                <dd><a href="/expert.html">专家名录</a></dd>
+                                <dd><a href="/achaime/institute.html">故宫研究院</a></dd>
+                                <dd><a href="/science/platform.html">故宫学院</a></dd>
+                                <dd><a href="/organization_others.html">其他学术机构</a></dd>
+                                <dd><a href="/journals.html">故宫博物院院刊</a></dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <h1><a href="/Creative.html">文创</a></h1>
+                            <div><img src="~/images/nav_liststyle.png" alt=""></div>
+                            <dl>
+                                <dd><a href="/publishes.html">故宫出版</a></dd>
+                                <dd><a href="/Creative.html#protects">文创产品</a></dd>
+                                <dd><a href="/lights/royal.html">故宫壁纸</a></dd>
+                                <dd><a href="/Creative.html#app">故宫APP</a></dd>
+                                <dd><a href="http://young.dpm.org.cn/damaoxian#gamezone" target="_blank">故宫游戏</a></dd>
+                            </dl>
+                        </div>
+                        <div class="item">
+                            <h1><a href="/About.html">关于</a></h1>
+                            <div><img src="~/images/nav_liststyle.png" alt=""></div>
+                            <dl>
+                                <dd><a href="/about/about_view.html">总说</a></dd>
+                                <dd><a href="/about/leader_list.html">领导</a></dd>
+                                <dd><a href="/about/information.html">资讯</a></dd>
+                                <dd><a href="/about/about_chron.html">院史编年</a></dd>
+                                <dd><a href="/about/patrons+benefactors.html">景仁榜</a></dd>
+                                <dd><a href="/about/organization.html">机构设置</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 导航栏end -->
+        </div>
+        <!-- 轮播图 -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <li><img src="~/images/s6295d1401ffb4.jpg" class="img-responsive" alt=""></li>
+                </div>
+                <div class="swiper-slide">
+                    <li><img src="~/images/s6283769d10209.jpg" class="img-responsive" alt=""></li>
+                </div>
+                <div class="swiper-slide">
+                    <li><img src="~/images/s6278b5c5c4c15.jpg" class="img-responsive" alt=""></li>
+                </div>
+                <div class="swiper-slide">
+                    <li><img src="~/images/s626a3774a5550.jpg" class="img-responsive" alt=""></li>
+                </div>
+                <div class="swiper-slide">
+                    <li><img src="~/images/s62610417810da.jpg" class="img-responsive" alt=""></li>
+                </div>
+                <div class="swiper-slide">
+                    <li><img src="~/images/s626b3655db080.jpg" class="img-responsive" alt=""></li>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev">
+                <img src="~/images/ld_prev.png" alt="" />
+            </div>
+            <div class="swiper-button-next">
+                <img src="~/images/ld_next.png" alt="" />
+            </div>
+        </div>
+        <script type="text/javascript" src="~/Scripts/swiper.js"></script>
+        <!-- 轮播图end -->
+
+        <div class="middle_box">
+            <!-- 闭关公告 -->
+            <div class="CloseAbout">
+                <h3>闭关公告</h3>
+                <p><a href="">各位观众：根据北京市疫情防控最新形势，为进一步降低人员流动带来疫情社会面传播风险，故宫博物院将于2022年5月12日起暂时闭馆，开放时间另行通知。</a></p>
+                <div class="workarea1">
+                    <div class="position1">
+                        <div class="svg-wrapper1">
+                            <svg height="40" width="150">
+                                <rect class="shape1" height="40" width="150" />
+                                <div class="text1">
+                                    <a href=""><span class="spot1"></span>详情内容</a>
+                                </div>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 闭馆公告end -->
+
+
+            <div class="consult_box">
+                <!-- 故宫咨询 -->
+                <div class="consult">
+                    <div class="txt">
+                        <div class="row">
+                            <div class="before col-md-10">
+                                <img class="bn_logo" src="~/images/public-icon1.png" alt="">
+                                <span>故宫</span>
+                                <img src="~/images/title_dot.png" alt="">
+                                <span>咨询</span>
+                                <img class="bn_logo" src="~/images/public-icon2.png" alt="">
+                            </div>
+                            <div class="more col-md-1 logo">
+                                <a href="">
+                                    <img src="~/images/more.png" alt="">
+                                    <div class="more1">更</div>
+                                    <div class="more2">多</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <ul class="sm">
+                            <li>
+                                <a href="">
+                                    <img src="~/images/index-icon2-1.png">
+                                    <span>【声明】故宫博物院关于“数字藏品”的声明</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="~/images/index-icon2-1.png">
+                                    <span>【严正声明】关于我院依法对“故宫博物院”享有名称权和对已注册商标的商标专用权的严正声明</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="~/images/index-icon2-1.png">
+                                    <span>【声明】关于故宫博物院在职、离退休人员参加社会文物鉴定等公务性活动的声明</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr style="border:1px solid rgb(196, 196, 196) ;">
+                        <div class="scroll-list">
+                            <ul class="news">
+                                @foreach (var item in Model)
+                                {
+                                    <li class="i-top">
+                                        <p><span class="timeSou">@item.ConsultTime</p>
+                                        <a href="/classify_detail/257464.html">@item.ConsultContent</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 故宫咨询 -->
+                <!-- 文物图片 -->
+                <div class="wenwu">
+                    <a href="">
+                        <span><img src="~/images/s629464a49c1ef.jpg" alt=""></span>
+                    </a>
+                </div>
+                <!-- 文物图片end -->
+                <!-- 今日闭馆 -->
+                <div class="Close_curator">
+                    <div class="back_close">
+                        <div>
+                            <div class="info1"><span>2022 / 5 / 31</span></div>
+                            <div class="info2"><span>今日闭馆</span></div>
+                            <div class="info3"><span>除法定节假日，故宫博物院全年实行周一闭馆</span></div>
+                            <div class="info4"><span>故宫博物院于2022年5月12日起暂时闭馆，开放时间另行通知</span></div>
+                            <div class="info5">
+                                <div class="time">
+                                    <span>08:30</span>
+                                    <img src="~/images/png7a.png">
+                                    <span>16:10</span>
+                                    <img src="~/images/png7a.png">
+                                    <span>17:50</span>
+                                </div>
+                                <div class="timeInfo">
+                                    <span class="timeInfo1">开放入馆时间</span>
+                                    <span class="timeInfo2">停止入馆时间</span>
+                                    <span class="timeInfo3">闭馆时间</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d2">
+                        <div class="dd1">
+                            <div class="item1">
+                                <div class="itemInfoa">
+                                    <a href="">
+                                        <div class="ico"><img src="https://img.dpm.org.cn/Uploads/Picture/2022/03/17/s6232d731689f6.png" alt=""></div>
+                                        <div class="h">电脑订票</div>
+                                    </a>
+                                </div>
+                                <div class="itemInfob">
+                                    <a>
+                                        <div class="ico">
+                                            <img src="https://img.dpm.org.cn/Uploads/Picture/2022/04/07/s624e7a21680f0.png" alt="">
+                                            <img src="https://img.dpm.org.cn/Uploads/Picture/2022/04/07/s624e7a40ec1f2.png" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="h">扫码订票</div>
+                                </div>
+                            </div>
+                            <div class="item2">
+                                <div class="h">票务客服电话</div>
+                                <div class="p">服务时间：8:30 — 17:30</div>
+                                <div class="t">
+                                    <div>010-85007057</div>
+                                    <div>010-85007058 </div>
+                                    <div>010-85007062 </div>
+                                    <div>010-85007063 </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dd2">
+                            <span>
+                                <a href=""><img src="~/images/s627a31a045d39.png"><span>交通路线</span></a>
+                            </span>
+                            <span>
+                                <a href=""><img src="~/images/s627a317a2854b.png"><span>游览须知</span></a>
+                            </span>
+                            <span>
+                                <a href=""><img src="~/images/s627a32d9e5e85.png"><span>导览地图</span></a>
+                            </span>
+                            <span>
+                                <a href=""><img src="~/images/s627a327e8a13c.png"><span>全景故宫</span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 今日闭馆end -->
+            </div>
+
+            <!-- 数字多宝阁 -->
+            <div class="vaseBox">
+                <div class="vase">
+                    <a href="">
+                        <span class="fw"></span>
+                    </a>
+                    <span class="hp"><img src="~/images/s627b4ede8e905.png" alt=""></span>
+                </div>
+
+                <div class="open">
+                    <div class="txt">
+                        <div class="row">
+                            <div class="before col-md-10">
+                                <img class="bn_logo" src="~/images/public-icon1.png" alt="">
+                                <span>开放</span>
+                                <img src="~/images/title_dot.png" alt="">
+                                <span>公告</span>
+                                <img class="bn_logo" src="~/images/public-icon2.png" alt="">
+                            </div>
+                            <div class="more col-md-1 logo">
+                                <a href="">
+                                    <img src="~/images/more.png" alt="">
+                                    <div class="more1">更</div>
+                                    <div class="more2">多</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <ul class="sm">
+                            <li>
+                                <a href="">
+                                    <img src="~/images/index-icon2-1.png">
+                                    <span>故宫博物院关于暂停城墙开放的公告</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="~/images/index-icon2-1.png">
+                                    <span>故宫博物院实行全部网络购票</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="scroll-list">
+                            <ul class="news">
+                                @foreach (var item in Model)
+                                {
+                                    <li>
+                                        <p><span>@item.OpenReleaseTime</span></p>
+                                        <a href="/classify_detail/257464.html">@item.OpenContent</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 数字多宝阁end -->
+            <!-- 故宫藏品 -->
+            <div class="block2  flex box-first">
+                <div class="object1">
+                    <div>
+                        <h1>
+                            <a href="">
+                                <span><img src="~/images/public-icon1.png" class="guImg"></span>
+                                <span>故宫</span>
+                                <img src="~/images/title_dot.png">
+                                <span>藏品</span>
+                                <span><img src="~/images/public-icon2.png" class="guImg"></span>
+                            </a>
+                            <div class="shuRow">
+                                <img src="~/images/png3.png" alt="">
+                            </div>
+                            <div>
+                                <span class="numCp">1,863,404</span>
+                                <span>
+                                    <img src="~/images/indexicon1.png" class="guImg">
+                                </span>
+                            </div>
+                        </h1>
+                    </div>
+                    <div>
+                        <div id="workarea" style="margin-top: 25px;">
+                            <div class="position">
+                                <div class="svg-wrapper">
+                                    <svg height="40" width="150">
+                                        <rect id="shape" height="40" width="150" />
+                                        <div id="text">
+                                            <a href="~/Cultural/CulturalCollect"><span class="spot"></span>藏品总目</a>
+                                        </div>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="workarea" style="margin-top:20px ;">
+                            <div class="position">
+                                <div class="svg-wrapper">
+                                    <svg height="40" width="150">
+                                        <rect id="shape" height="40" width="150" />
+                                        <div id="text">
+                                            <a href=""><span class="spot"></span>数字文物库</a>
+                                        </div>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="object2">
+                    <div class="card card1">
+                        <div class="content">
+                            <a href="">
+                                <h2>斗彩婴戏图杯</h2>
+                                <p>明成化</p>
+                                <p>高4.8厘米，口径6厘米，足径2.7厘米</p>
+                                <p>杯外部通景绘婴图,一童双手持线放风筝</p>
+                                <p>此杯造型轻盈秀雅另一童观看，作欢</p>
+                                <p>舞状，其余三童持花为戏。</p>
+                                <p>胎体洁白细腻</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="object3">
+                    <div class="card card2">
+                        <div class="content">
+                            <a href="">
+                                <h2>粉彩花卉凸三婴戏瓶</h2>
+                                <p>清乾隆</p>
+                                <p>高21厘米，口径5.8厘米，足径7.6厘米</p>
+                                <p>杯外部通景绘婴图,一童双手持线放风筝</p>
+                                <p>此杯造型轻盈秀雅另一童观看，作欢</p>
+                                <p>舞状，其余三童持花为戏。</p>
+                                <p>颇具情趣</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="object4">
+                    <div class="card card3">
+                        <div class="content">
+                            <a href="">
+                                <h2>青花婴戏图碗</h2>
+                                <p>清光绪</p>
+                                <p>高7.4厘米，口径15.5厘米，足径5.8厘米</p>
+                                <p>碗外壁以青花装饰,发色灰蓝，绘两组</p>
+                                <p>戏婴图以树木、山石、花卉相隔。</p>
+                                <p>舞状，其余三童持花为戏。</p>
+                                <p>经典文祥之一</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 故宫藏品end -->
+
+            <div class="block3">
+                <!-- 博物馆活动 -->
+                <div class="active">
+                    <div class="txt">
+                        <div class="row">
+                            <div class="before col-md-10">
+                                <img class="bn_logo" src="~/images/public-icon1.png" alt="">
+                                <span>博物馆活动</span>
+                                <img class="bn_logo" src="~/images/public-icon2.png" alt="">
+                            </div>
+                            <div class="more col-md-1 logo">
+                                <a href="">
+                                    <img src="~/images/more.png" alt="">
+                                    <div class="more1">更</div>
+                                    <div class="more2">多</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="scroll-list">
+                            <ul class="news">
+                                @foreach (var item in Model)
+                                {
+                                    <li>
+                                        <p><span>@item.ActivitiesTime</span></p>
+                                        <a href="/classify_detail/257464.html">@item.ActivitiesContent</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 博物馆活动end -->
+                <!-- 学术研究 -->
+                <div class="study">
+                    <div class="txt">
+                        <div class="row">
+                            <div class="before col-md-10">
+                                <img class="bn_logo" src="~/images/public-icon1.png" alt="">
+                                <span>学术研究 </span>
+                                <img class="bn_logo" src="~/images/public-icon2.png" alt="">
+                            </div>
+                            <div class="more col-md-1 logo">
+                                <a href="">
+                                    <img src="~/images/more.png" alt="">
+                                    <div class="more1">更</div>
+                                    <div class="more2">多</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="scroll-list">
+                            <ul class="news">
+                                @foreach (var item in Model)
+                                {
+                                    <li>
+                                        <p><span>@item.AcademicTime</span></p>
+                                        <a href="/classify_detail/257464.html">@item.AcademicContent</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 学术研究end -->
+                <!-- 本期/往期 -->
+                <div class="current">
+                    <div class="currentBox1">
+                        <div class="tpMain">
+                            <img src="~/images/s6295caf8592c4.png" class="tpMainImg">
+                        </div>
+                        <div class="mask">
+                            <ul>
+                                <li><a href="">《试论“物”的能动性及其在博物馆藏品研究中的应用》</a></li>
+                                <li><a href="">《国有博物馆收费展览研究——以广东省博物馆为例》</a></li>
+                                <li><a href="">《不同空间语境下中国木结构古建筑展览的现状及特点》</a></li>
+                                <li><a href="">《2019-2020年度“丝绸之路”主题展览的全球观察与评述》</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="currentBox2">
+                        <div class="tpMain">
+                            <img src="~/images/s625f79d6e79b9.png" style="width:75% ; margin-left: 15px;">
+                        </div>
+                        <div class="mask">
+                            <ul>
+                                <li><a href="">《明宪宗笔下的「三面派」》</a></li>
+                                <li><a href="">《缣素盈笔墨 色润亦可爱——冷枚〈自结履系图〉页及其临摹》</a></li>
+                                <li><a href="">《乾隆皇帝〈岱庙汉柏图〉的历史文化意义》</a></li>
+                                <li><a href="">《日本正仓院宝库及宝物的保护》</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 本期/往期end -->
+            </div>
+
+            <!-- V故宫 -->
+            <div class="block4 ">
+                <div class="item1 card card1">
+                    <a href=" ">
+                        <div><img src="~/images/s5863704a46b10.png" alt=" "></div>
+                        <h2>图书馆</h2>
+                    </a>
+                </div>
+                <div class="item2 card card1">
+                    <a href=" ">
+                        <div><img src="~/images/s58636fe246e0a.png" alt=" "></div>
+                        <h2>试听馆</h2>
+                    </a>
+                </div>
+                <div class="item3 card card1">
+                    <a href=" ">
+                        <div><img src="~/images/s58bcfc20c5076.png" alt=" "></div>
+                        <h2>数字文物库</h2>
+                    </a>
+                </div>
+                <div class="item4 card card1">
+                    <a href=" ">
+                        <div><img src="~/images/s58bcfc33c893d.png" alt=" "></div>
+                        <h2>全景故宫</h2>
+                    </a>
+                </div>
+                <div class="item5 card card1">
+                    <a href=" ">
+                        <div><img src="~/images/s58bcfc4e63ba3.png" alt=" "></div>
+                        <h2>V故宫</h2>
+                    </a>
+                </div>
+            </div>
+            <!-- V故宫end -->
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="end">
+        <div class="endLine1">
+            <div class="ad">
+                <div class="list1">
+                    <img src="~/images/s6184ec2896151.png" alt="">
+                </div>
+                <p>微博</p>
+            </div>
+            <div class="ad">
+                <div class="list1">
+                    <img src="~/images/s6184ec3555cb0 (1).png" alt="">
+                </div>
+                <p>微信</p>
+            </div>
+            <div class="ad">
+                <div class="list1">
+                    <img src="~/images/s6184ec413a76b.png" alt="">
+                </div>
+                <p>小程序</p>
+            </div>
+            <div class="ad">
+                <div class="list1">
+                    <img src="~/images/s6184ec4c97952.png" alt="">
+                </div>
+                <p>学习强国号</p>
+            </div>
+            <div class="ad">
+                <div class="list1">
+                    <img src="~/images/s6184ec5b4abae.png" alt="">
+                </div>
+                <p>视频号</p>
+            </div>
+        </div>
+        <div class="endLine2">
+            <div style="margin-right: 10px; color: rgb(180, 179, 184);">网站访问量</div>
+            <span>1</span>
+            <span>7</span>
+            <span>6</span>
+            <span>5</span>
+            <span>0</span>
+            <span>9</span>
+            <span>2</span>
+            <span>8</span>
+            <span>4</span>
+        </div>
+        <div class="endLine3">
+            <span><a href=""> 网站地图</a></span>
+            <span><a href=""> 相关链接</a></span>
+            <span><a href=""> 影像授权</a></span>
+            <span><a href=""> 隐私政策 </a></span>
+            <span><a href=""> 版权声明 </a></span>
+            <span><a href=""> 留言板</a></span>
+            <span><a href=""> 联系我们</a></span>
+            <span><a href=""> 关于我们</a></span>
+        </div>
+        <div class="endLine4">
+            <span>网站维护：故宫博物院数字与信息部 </span>
+            <span>联系方式：<a href="">gugong@dpm.org.cn</a></span>
+        </div>
+        <div class="endLine5">
+            <span><a href=""><img src="~/images/ico.png" alt=""> 京公网安备 11010102004165号</a></span>
+            <span><a href="">京ICP备05067311号-1</a></span>
+
+        </div>
+        <div class="endLine4">
+            <span>© 2001- 现在 故宫博物院 </span>
+            <span><a href="">网站建设：北京分形科技</a></span>
+        </div>
+    </div>
+    <!-- 底部end -->
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/message.js"></script>
+</body>
+</html>
+
+<script>
+    $("#showList").click(function () {
+        $(".listBox").show()
+    })
+    $("#closeList").click(function () {
+        $(".listBox").hide()
+    })
+
+    $(function () {
+        $(".menuWriteBox").mouseover(function () {
+            $(this).children(".lyb").show();
+        })
+        $(".menuWriteBox").mouseout(function () {
+
+            $(this).children(".lyb").hide();
+        });
+        $("#showVisit").mouseover(function () {
+            $(this).children(".vice_title").show();
+        })
+        $("#showVisit").mouseout(function () {
+
+            $(this).children(".vice_title").hide();
+        });
+    })
+
+    //
+    $(".tab_item").mouseover(function () {
+        var index = $(this).index()
+        console.log(index);
+        $(".tab").eq(index).addClass("on").siblings().removeClass("on");
+    });
+    $(".tab").mouseleave(function () {
+        $(".tab").removeClass("on")
+    });
+</script>

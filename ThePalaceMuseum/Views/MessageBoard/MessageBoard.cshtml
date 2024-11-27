@@ -1,0 +1,182 @@
+﻿@using ThePalaceMuseumWeb.EF.Model
+@model List<Voice>
+@section css{
+    <link href="~/Content/MessageBoard.css" rel="stylesheet" />
+    <link href="~/Content/jquery.sPage.css" rel="stylesheet" />
+    <link href="~/Content/button.min.css" rel="stylesheet" />
+}
+
+@section js{
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.sPage.min.js"></script>
+    <script src="~/Scripts/message.js"></script>
+}
+<div class="mainBox">
+    <div class="title">
+        <span><a href="">首页</a></span> >> <span><a href="">留言板</a></span>
+    </div>
+
+    <!-- 留言提交 -->
+    <div class="leave">
+        <div class="leaveItem1">
+            <div>
+                <span><img src="~/images/public-icon3.png"></span><span class="wz">我要留言</span><span><img src="~/images/public-icon4.png" alt=""></span>
+            </div>
+        </div>
+        <div class="leaveItem2">
+            <p>欢迎广大观众朋友对我院工作提出宝贵的意见和建议</p>
+        </div>
+        <form action="/MessageBoard/MessageBoard" method="post" class="frmbox">
+            <div class="leaveItem3">
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <div class="gd"></div>
+            <div class="leaveItem4">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"></span>
+                    <input type="text" class="form-control" placeholder="留言内容" aria-describedby="basic-addon1" name="VoiceMessage">
+                </div>
+            </div>
+            <div class="leaveItem5">
+                <input type="text" class="form-control" placeholder="验证码">
+            </div>
+            <div id="workarea">
+                <div class="position">
+                    <div class="svg-wrapper">
+                        <svg height="40" width="150">
+                            <rect id="shape" height="40" width="150" />
+                            <div id="text" type="submit">
+                                <a href=""><span class="spot"></span>提交留言</a>
+                            </div>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- 留言提交end -->
+    <div class="line"></div>
+
+    <!-- 留言内容 -->
+    <div class="MessageContent">
+        <div class="chooseMessage">
+            <div class="list1"></div>
+            <div class="listTxt"><a href="#">留言选登</a></div>
+            <div class="list2"></div>
+            <div class="listTxt2"><a href="#">常见问题</a></div>
+        </div>
+        <div class="chooseSay">
+            @foreach (var item in Model)
+            {
+                <div class="internalUser">
+                    <div class="voice">
+                        <div class="UserSay">网友留言：</div>
+                        <div class="userText">@item.VoiceMessage</div>
+                        <div class="Usertime">@item.VoiceTime</div>
+                    </div>
+                    <div class="response">
+                        <span class="UserSay">留言回复：</span>
+                        <span class="responseTxt">@item.VoiceResponse</span>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="FAQ">
+            @foreach (var item2 in Model)
+            {
+                <div class="UserProblem">
+                    <div class="AskBox">
+                        <div class="UserAsk">问：</div>
+                        <div class="userText">@item2.ProblemInquire</div>
+                    </div>
+                    <div class="response">
+                        <div class="UserReply">答：</div>
+                        <div class="responseTxt">@item2.ProblemAnswer</div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@{ 
+    int nextPage = ViewBag.pageIndex+1;
+    if (nextPage > ViewBag.totalPage)
+    {
+        nextPage = ViewBag.totalPage;
+    }
+    int prevPage = ViewBag.pageIndex-1;
+    if (prevPage < 1)
+    {
+        prevPage = 1;
+    }
+    string next = "/MessageBoard/MessageBoard?pageIndex=" + nextPage;
+    string prev = "/MessageBoard/MessageBoard?pageIndex=" + prevPage;
+}
+<div class="pages">
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li>
+                <a href="@prev" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            @{
+                for (int i = 1; i < ViewBag.totalPage; i++)
+                {
+                    if (i == ViewBag.pageIndex)
+                    {
+                        <li class="active"><a href="/MessageBoard/MessageBoard?pageIndex=@i">@i</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="/MessageBoard/MessageBoard?pageIndex=@i">@i</a></li>
+                    }
+                }
+            }
+            <li>
+                <a href="@next" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="line2"></div>
+
+<!-- V故宫 -->
+<div class="block4 ">
+    <div class="item1 card card1">
+        <a href=" ">
+            <div><img src="~/images/s58bd6098f18ff.png" alt=" "></div>
+            <h2>图书馆</h2>
+        </a>
+    </div>
+    <div class="item2 card card1">
+        <a href=" ">
+            <div><img src="~/images/s58bd6098f1b06.png" alt=" "></div>
+            <h2>试听馆</h2>
+        </a>
+    </div>
+    <div class="item3 card card1">
+        <a href=" ">
+            <div><img src="~/images/s58bd6098f16fd.png" alt=" "></div>
+            <h2>数字文物库</h2>
+        </a>
+    </div>
+    <div class="item4 card card1">
+        <a href=" ">
+            <div><img src="~/images/s58bd6098f14ef.png" alt=" "></div>
+            <h2>全景故宫</h2>
+        </a>
+    </div>
+    <div class="item5 card card1">
+        <a href=" ">
+            <div><img src="~/images/s58bd6098f127e.png" alt=" "></div>
+            <h2>V故宫</h2>
+        </a>
+    </div>
+</div>
+<!-- V故宫end -->
+

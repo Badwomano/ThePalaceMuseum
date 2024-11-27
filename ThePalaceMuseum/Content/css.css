@@ -1,0 +1,233 @@
+a {
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+}
+
+.title .align {
+    /* width: 400px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title .align img {
+    width: 30px;
+}
+
+.title .txt {
+    font-size: 22px;
+}
+
+.image-text {
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.image-text img {
+    width: 90px;
+}
+
+.images-text {
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.bgImage {
+    background-color: antiquewhite;
+}
+
+@media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
+    .DX {
+        width: 100px;
+    }
+}
+
+.bgImage .txt {
+    font-size: 20px;
+    color: rgb(103, 65, 9);
+}
+
+.bgImage .bg {
+    text-decoration: none;
+    color: rgb(70, 68, 65);
+}
+
+.bgImage .bg:hover {
+    opacity: 0.8;
+}
+
+.right-bg {
+    height: 420px;
+    background-color: brown;
+    padding-left: 40px;
+    color: white;
+}
+
+.right-bg img {
+    width: 30px;
+}
+
+.topTitle {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.notice {
+    list-style-type: circle;
+}
+
+.notice a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 14px;
+}
+
+.notice a:hover {
+    text-decoration: none;
+    color: rgb(218, 219, 220);
+}
+
+.notice span {
+    color: rgb(218, 219, 220);
+}
+
+
+/* <!-- 第三板块———开放时间 --> */
+
+.openTime {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.openTime img {
+    width: 3%;
+}
+
+.openTime .txt {
+    font-size: 22px;
+}
+
+.highSeason {
+    /* border: 1px solid red; */
+    height: 550px;
+    background: url("../images/secend-one.jpg") no-repeat -40px 0px;
+}
+
+
+/* <!-- 第四板块————导览地图 --> */
+
+.map {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map .txt {
+    font-size: 22px;
+}
+
+.map-object {
+    background-color: blanchedalmond;
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.map-object ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.map-object ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.down a {
+    color: black;
+    text-decoration: none;
+}
+
+.down img {
+    width: 16%;
+}
+
+.DX img:hover {
+    cursor: pointer;
+}
+
+.road {
+    background: url("../images/fifth-one.jpg") no-repeat;
+    height: 600px;
+    position: relative;
+}
+
+
+/* <!-- 第五板块————票价及优惠政策 --> */
+
+.picList {
+    margin-top: 150px;
+}
+
+.picList li {
+    color: white;
+    line-height: 30px;
+}
+
+.choice li {
+    border-radius: 8px;
+    padding-top: 10px;
+    height: 50px;
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid grey;
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.choice li:active {
+    background-color: rgba(178, 178, 229, 0.694);
+}
+
+
+/* <!-- 第六板块————交通路线 --> */
+
+
+/* 门轮播 */
+
+.choices li {
+    margin-top: 30px;
+    border-radius: 8px;
+    padding-top: 10px;
+    height: 50px;
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgb(161, 56, 56);
+    display: inline-block;
+    list-style-type: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* <!-- 第七板块————游览须知 --> */
+
+.visit img {
+    width: 13%;
+}

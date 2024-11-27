@@ -1,0 +1,69 @@
+﻿@{
+    Layout = null;
+}
+@using ThePalaceMuseumWeb.EF.Model
+@model List<CollectCategory>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/cultural.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <!-- 导航栏 -->
+        <div class="MessageMenu">
+            <div class="MenuTotalLogo">
+                <div class="LogoBox">
+                    <a href="~/Home/Index"><img src="~/images/icon01_2.png" alt=""></a>
+                </div>
+            </div>
+            <div class="MenuTotal">
+                <a href="">
+                    故宫博物院藏品总目
+                </a>
+            </div>
+            <div class="MenuLogo">
+                <div class="menulogo">
+                    <img src="~/images/logo_center_v1.png" alt="">
+                </div>
+            </div>
+            <div class="MenuSearch">
+                <div class="search">
+                    <form>
+                        <div class="cp_search_box">
+                            <input type="text" value="" placeholder="共 1863404 件藏品" class="input01">
+                            <input type="button" onclick="_list.topSearch()" class="input02">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 导航栏end -->
+        <div class="culturalBox">
+            @foreach (var item in Model)
+            {
+                <div>
+                    <a href="~/Cultural/CulturalCollectContext">
+                        <div class="culturals">
+                            <img src="@item.CollectImg" alt="">
+                            <div class="cover">
+                                <span class="cotegroy">@item.CollectCategory1</span>
+                                <span class="rightNum"><span class="coverNum">@item.CollectNum</span><span class="covertxt">件/套</span></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+
+</html>
+

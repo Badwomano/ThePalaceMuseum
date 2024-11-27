@@ -1,0 +1,110 @@
+.host{
+    width: 70%;
+    height: 100%;
+    margin:auto;
+}
+.home{
+    position: relative;
+    cursor: pointer;
+    top: 70px;
+    font-size: 14px;
+}
+.headtou img{
+    width: 25px;
+    height: 40px;
+}
+.headtou{
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+.headtouleft{
+    position: relative;
+    left: -166px;
+    top: 45px;
+    width: 25px;
+    height: 40px;
+}
+.headtouwen{
+    position: relative;
+    left: -120px;
+}
+.headtouright{
+    position: relative;
+    left: 164px;
+    top: -38px;
+    width: 25px;
+    height: 40px;
+}
+.headhost{
+    position: relative;
+    top: 30px;
+}
+.headhosts{
+    position: relative;
+    width: 900px;
+    color: white;
+    top: -520px;
+    left: 120px;
+}
+.headholeft{
+    position: relative;
+    left: 184px;
+    bottom: 212px;
+}
+.headhostp{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 20px;
+    left: -50px;
+    top: -410px;
+}
+.headhopl{
+    text-align: center;
+    font-size: 20px;
+    margin-top: -600px;
+    cursor: pointer;
+}
+
+.bodyhe{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    top: -100px;
+}
+.bodyhead{
+    text-align: center;
+}
+.jiaod li{
+    float: left;
+    margin-left: 15px;
+    list-style: none;
+}
+.jiaod li img{
+    width: 300px;
+    height: 450px;
+}
+.first{
+    margin: 0;
+}
+.mew{
+    position: absolute;
+}
+.tow{
+    position: relative;
+    top: -440px;
+    left: 160px;
+    font-size: 35px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    background: url(../images/mask90.png);
+    border-radius: 100px;
+}
+.top{
+    color: #000;
+    position: relative;
+    top: 35px;
+}

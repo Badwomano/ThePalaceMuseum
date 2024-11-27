@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePalaceMuseum", "ThePalaceMuseum\ThePalaceMuseum.csproj", "{38ECAF3C-6130-4492-8F8F-6E6F8AF8C5BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePalaceMuseumWeb.BLL.Interface", "MuseumWeb.BLL.Interface\ThePalaceMuseumWeb.BLL.Interface.csproj", "{ED1573BF-E7BA-4405-BE87-073994D3D78F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePalaceMuseumWeb.BLL.Service", "MuseumWeb.BLL.Service\ThePalaceMuseumWeb.BLL.Service.csproj", "{F86A5789-203C-490E-B238-71BD657E70B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePalaceMuseumWeb.EF.Model", "ThePalaceMuseumWeb.EF.Model\ThePalaceMuseumWeb.EF.Model.csproj", "{E2B15E64-ACBE-48F0-96F9-463C40500272}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38ECAF3C-6130-4492-8F8F-6E6F8AF8C5BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38ECAF3C-6130-4492-8F8F-6E6F8AF8C5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38ECAF3C-6130-4492-8F8F-6E6F8AF8C5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38ECAF3C-6130-4492-8F8F-6E6F8AF8C5BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED1573BF-E7BA-4405-BE87-073994D3D78F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1573BF-E7BA-4405-BE87-073994D3D78F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1573BF-E7BA-4405-BE87-073994D3D78F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1573BF-E7BA-4405-BE87-073994D3D78F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86A5789-203C-490E-B238-71BD657E70B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86A5789-203C-490E-B238-71BD657E70B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86A5789-203C-490E-B238-71BD657E70B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86A5789-203C-490E-B238-71BD657E70B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2B15E64-ACBE-48F0-96F9-463C40500272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2B15E64-ACBE-48F0-96F9-463C40500272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2B15E64-ACBE-48F0-96F9-463C40500272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2B15E64-ACBE-48F0-96F9-463C40500272}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E1D918E-5C87-4964-8841-E3EB24D3F376}
+	EndGlobalSection
+EndGlobal
